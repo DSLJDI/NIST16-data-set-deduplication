@@ -81,3 +81,12 @@ Files in the ZIP are organized as follows:
    
 
 2. The images look almost identical, but the masks are completely different
+   
+## A brief introduction on how to implement the above two methods
+We determine whether the images are similar based on the SSIM (**Structural Similarity**) values of the two images. Since SSIM requires the pixels of the two pictures to be consistent for calculation, we first determine whether the pixels of the two pictures are consistent. If they are inconsistent, we consider the two pictures to be dissimilar. That is, set their SSIM values to 0. It is indeed true that the pixel values of tampered pictures from the same original picture are consistent. There are a total of 564 tampered images in NIST16. After calculating the SSIM values in pairs, we can get a 564*564 two-dimensional matrix. After our many experiments, we found that it is more reasonable to set the SSIM value threshold for judging whether two pictures are similar to 0.9. For the two-dimensional matrix obtained previously, we set the SSIM value greater than or equal to 0.9 to 1, and the SSIM value less than 0.9 to 0. hen perform the transitive closure calculation on the newly obtained matrix, and finally perform the connected graph calculation on the transitive closure matrix. We input the pictures in the same connected graph and their corresponding masks into the same folder. Finally, we got 90 connected subgraphs, that is, we divided the 564 pictures into 90 folders.
+
+Finally, we performed manual screening based on the method mentioned above to determine whether the images are similar. For similar pictures in the same folder, we assign them to corresponding subfolders based on their different tampering methods. Finally, for each group of similar pictures, for method one, we try to save only one most realistic image. For method two, we try to allocate a group of similar pictures to the training set or test set.
+
+## Cite
+
+You can visit the NIST16 official website[OpenMFC (nist.gov)](https://mfc.nist.gov/) to download the original data set.
