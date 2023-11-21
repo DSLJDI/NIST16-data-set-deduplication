@@ -41,7 +41,7 @@ For method two, "a group of similar pictures" are either placed only in the trai
 
 Here we place the download address of the NIST16 data set filtered by method 2 [NIST16/method2](/NIST16/method2)，you can **DOWNLOAD** it through the link above.
 
-Files in the ZIP are organized as follows:
+Files in the repository are organized as follows:
 
 ```python
 |——Tp        #Tampered images
