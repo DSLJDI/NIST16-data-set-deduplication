@@ -56,28 +56,23 @@ Files in the repository are organized as follows:
 
 1. The pictures and masks are very similar:
 ![](image/similar-picture.png)
-2. There is only a small amount of displacement in the tampered area, and the overall "pattern" is consistent.
+2. There is only a small amount of displacement in the tampered area, and the overall "pattern" is consistent:
 ![](image/similar-picture2.png)
-3. For the same tampered area, only tamper in different ways
+3. For the same tampered area, only tamper in different ways:
 ![](image/similar-picture3.png)
-   
-
-4. The mask looks different, but the tampering pattern of the original image is almost exactly the same
+4. The mask looks different, but the tampering pattern of the original image is almost exactly the same:
 ![](image/similar-picture4.png)
-   
-
-5. In a similar position, something with a similar pattern is placed
+5. In a similar position, something with a similar pattern is placed:
 ![](image/similar-picture5.png)
    
-
 ### Consider different situations
 
-1. Although the pictures are roughly the same, there are some significant outline differences
-![](image/dif-similar-picture.png)
-   
+1. Although the pictures are roughly the same, there are some significant outline differences:
+![](image/dif-similar-picture.png) 
 
-2. The images look almost identical, but the masks are completely different
-![](image/dif-similar-picture1.png)   
+2. The images look almost identical, but the masks are completely different:
+![](image/dif-similar-picture1.png)
+
 ## A brief introduction on how to implement the above two methods
 We determine whether the images are similar based on the SSIM (**Structural Similarity**) values of the two images. Since SSIM requires the pixels of the two pictures to be consistent for calculation, we first determine whether the pixels of the two pictures are consistent. If they are inconsistent, we consider the two pictures to be dissimilar. That is, set their SSIM values to 0. It is indeed true that the pixel values of tampered pictures from the same original picture are consistent. There are a total of 564 tampered images in NIST16. After calculating the SSIM values in pairs, we can get a 564*564 two-dimensional matrix. After our many experiments, we found that it is more reasonable to set the SSIM value threshold for judging whether two pictures are similar to 0.9. For the two-dimensional matrix obtained previously, we set the SSIM value greater than or equal to 0.9 to 1, and the SSIM value less than 0.9 to 0. hen perform the transitive closure calculation on the newly obtained matrix, and finally perform the connected graph calculation on the transitive closure matrix. We input the pictures in the same connected graph and their corresponding masks into the same folder. Finally, we got 90 connected subgraphs, that is, we divided the 564 pictures into 90 folders.
 
