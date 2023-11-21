@@ -35,11 +35,11 @@ In order to eliminate the impact of Data leakage, it is necessary to filter the 
 
 For method one, in principle we choose the pictures that “look the most real” to keep. This allows the model to not only focus on tampering traces, but also "cheat" through the pattern of the image. This is used to solve the "data leakage" problem.
 
-Here we place the download address of the NIST16 data set filtered by method 1 [](NIST16/method1)，you can **DOWNLOAD** it through the link above.
+Here we place the download address of the NIST16 data set filtered by method 1 [](../NIST16/method1)，you can **DOWNLOAD** it through the link above.
 
 For method two, "a group of similar pictures" are either placed only in the training set or only in the test set. This can make the data of the training set and the test set as different as possible. It is also in line with our goal of solving "data leakage".
 
-Here we place the download address of the NIST16 data set filtered by method 2 [](NIST16/method2)，you can **DOWNLOAD** it through the link above.
+Here we place the download address of the NIST16 data set filtered by method 2 [](../NIST16/method2)，you can **DOWNLOAD** it through the link above.
 
 Files in the ZIP are organized as follows:
 
