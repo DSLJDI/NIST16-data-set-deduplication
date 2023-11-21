@@ -12,7 +12,7 @@ The NIST16 data set is a commonly used tamper detection data set, containing 564
 
 Some examples of similar images:
 
-![](image/similar-picture.png)
+![](image/similar-picture1.png)
 
 This brings about a problem. When training a deep learning model, the model does not really need to pay attention to the traces related to tampering. It often only needs to learn the pattern of "there is a black object on the yellow background in the lower left corner of the image", and then activate the output accordingly. A "bird-shaped mask" can achieve a very high accuracy, which is obviously not what we want to see.
 
@@ -55,7 +55,7 @@ Files in the repository are organized as follows:
 ### Consider similar situations
 
 1. The pictures and masks are very similar:
-![](image/similar-picture.png)
+![](image/similar-picture1.png)
 2. There is only a small amount of displacement in the tampered area, and the overall "pattern" is consistent:
 ![](image/similar-picture2.png)
 3. For the same tampered area, only tamper in different ways:
