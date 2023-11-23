@@ -37,7 +37,7 @@ For method one, in principle we choose the pictures that â€œlook the most realâ€
 
 For method two, "a group of similar pictures" are either placed only in the training set or only in the test set. This can make the data of the training set and the test set as different as possible. It is also in line with our goal of solving "data leakage".
 
-You can use the ![NIST16/classification-of-file.py](NIST16/classification-of-file.py) file to obtain the data set cleaned by method 1 and method 2.
+You can use the [NIST16/classification-of-file.py](NIST16/classification-of-file.py) file to obtain the data set cleaned by method 1 and method 2.
 
 ## A brief introduction to our definition of similarity
 
