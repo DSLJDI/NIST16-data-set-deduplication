@@ -1,3 +1,4 @@
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=DSL_JDI.NIST16-data-set-deduplication)
 # Two methods to deduplicate NIST16 tamper detection data sets
 This repository includes resources below:
 
