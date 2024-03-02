@@ -38,7 +38,7 @@ For method one, in principle we choose the pictures that â€œlook the most realâ€
 
 For method two, "a group of similar pictures" are either placed only in the training set or only in the test set. This can make the data of the training set and the test set as different as possible. It is also in line with our goal of solving "data leakage".
 
-You can use the [NIST16/classification-of-file.py](NIST16/classification-of-file.py) file to obtain the data set cleaned by method 1 and method 2.
+You can use the [NIST16/classification-of-file.py](NIST16/classification-of-file.py) file to obtain the data set cleaned by method 1 and method 2. To use the classification-of-file.py file, you first need to visit the NIST16 official website [OpenMFC(nist.gov)](https://mfc.nist.gov/) to download the original data set. The original data set is downloaded and decompressed into a folder named NC2016-Test0613. You only need to place the classification-of-file.py file in this folder and execute it to get our cleaned data set.
 
 ## A brief introduction to our definition of similarity
 
